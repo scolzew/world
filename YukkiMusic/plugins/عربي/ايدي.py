@@ -29,7 +29,7 @@ def get_id(msg: Message):
 
 @app.on_message(
         command(["ايدي","الايدي"])
-async def showid(_, message: Message):
+async def khalid(client: Client, message: Message):
     chat_type = message.chat.type
 
     if chat_type == "private":
