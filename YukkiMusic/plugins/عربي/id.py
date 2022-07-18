@@ -17,7 +17,7 @@ async def khalid(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
     async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""𓂄𓆩💕نـيـمـك𓆪𓂁 ⇐ {message.from_user.mention}\n\n𓂄𓆩💕يوزرك𓆪𓂁⇒ @{message.from_user.username}\n\n⇐𓂄𓆩💕الايدي بتاعك𓆪𓂁 {message.from_user.id}\n\n⇐𓂄𓆩💕ايدي الجروب𓆪𓂁 {message.chat.id}""", 
+                    await message.reply_photo(photo.file_id,       caption=f"""{message.from_user.mention} ⇐𓂄𓆩💕نـيـمـك𓆪𓂁\n\n@{message.from_user.username} ⇐𓂄𓆩💕يوزرك𓆪𓂁\n\n{message.from_user.id} ⇐𓂄𓆩💕الايـدي بـتـاعـك𓆪𓂁\n\n{message.chat.id} ⇐𓂄𓆩💕ايـدي الـجـروب𓆪𓂁""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
