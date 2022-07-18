@@ -1,11 +1,12 @@
 from pyrogram import Client
 from pyrogram.types import Message
 from config import BOT_USERNAME
-from driver.filters import command2, other_filters
-from driver.get_file_id import get_file_id
+from strings.get_file_id import get_file_id
+from strings import get_command
+from strings.filters import command
 
 
-@Client.on_message(command(["id", f"id@{BOT_USERNAME}"]))
+@Client.on_message(command(["id"]))
 async def showid(_, message: Message):
     await message.delete()
     chat_type = message.chat.type
