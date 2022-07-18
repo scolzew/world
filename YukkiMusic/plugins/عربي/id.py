@@ -6,7 +6,8 @@ from strings import get_command
 from strings.filters import command
 
 
-@Client.on_message(command(["id"]))
+@app.on_message(
+        command(["id"])
 async def showid(_, message: Message):
     await message.delete()
     chat_type = message.chat.type
