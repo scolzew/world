@@ -29,7 +29,7 @@ BOT_USERNAME = getenv("BOT_USERNAME")
 )
 async def khalid(client: Client, message: Message):
     await message.reply_text(
-        "◂ معرفك ↫ @{message.from_user.username}
+        "◂ معرفك ↫ @{message.from_user.username}"
         )
         reply_markup=InlineKeyboardMarkup(
          [
