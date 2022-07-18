@@ -11,9 +11,8 @@
 from typing import Union
 import asyncio
 from pyrogram import filters, types
-from pyrogram.types import (InlineKeyboardButton,
-                            InlineKeyboardMarkup, Message)
-                            from youtubesearchpython.__future__ import VideosSearch
+from pyrogram.types import (InlineKeyboardButton,InlineKeyboardMarkup, Message)
+from youtubesearchpython.__future__ import VideosSearch
 
 import config
 from config import BANNED_USERS
