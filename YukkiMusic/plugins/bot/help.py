@@ -52,12 +52,14 @@ async def helper_private(
         keyboard = help_pannel(_, True)
         if update.message.photo:
             await update.message.delete()
-            await update.message.reply_text(
-                _["help_1"], reply_markup=keyboard
+            await update.message.reply_photo(
+            photo=config.START_IMG_URL,
+            caption=_["help_1"], reply_markup=keyboard
             )
         else:
-            await update.edit_message_text(
-                _["help_1"], reply_markup=keyboard
+            await update.edit_message_photo(
+            photo=config.START_IMG_URL,
+            caption=_["help_1"], reply_markup=keyboard
             )
     else:
         chat_id = update.chat.id
@@ -69,7 +71,9 @@ async def helper_private(
         language = await get_lang(chat_id)
         _ = get_string(language)
         keyboard = help_pannel(_)
-        await update.reply_text(_["help_1"], reply_markup=keyboard)
+        await update.reply_photo(
+            photo=config.START_IMG_URL,
+            caption=_["help_1"], reply_markup=keyboard)
 
 
 @app.on_message(
