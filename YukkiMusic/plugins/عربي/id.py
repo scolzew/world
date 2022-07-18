@@ -1,55 +1,32 @@
+import asyncio
 from pyrogram import Client, filters
-from pyrogram.types import Message
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from strings import get_command
 from strings.filters import command
-from YukkiMusic import app
-
-def get_id(msg: Message):
-    if msg.media:
-        for message_type in (
-            "photo",
-            "animation",
-            "audio",
-            "document",
-            "video",
-            "video_note",
-            "voice",
-            # "contact",
-            # "dice",
-            # "poll",
-            # "location",
-            # "venue",
-            "sticker",
-        ):
-            obj = getattr(msg, message_type)
-            if obj:
-                setattr(obj, "message_type", message_type)
-                return obj
+from YukkiMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
-@app.on_message(filters.command(["id", "stickerid", "stkid", "stckrid"]))
-async def showid(_, message: Message):
-    chat_type = message.chat.type
+# الكود اهو يصحبي  . 
 
-    if chat_type == "private":
-        user_id = message.chat.id
-        await message.reply_text(f"<code>{user_id}</code>")
-
-    elif chat_type in ["group", "supergroup"]:
-        _id = ""
-        _id += "<b>ᴄʜᴀᴛ ɪᴅ</b>: " f"<code>{message.chat.id}</code>\n"
-        if message.reply_to_message:
-            _id += (
-                "<b>ʀᴇᴩʟɪᴇᴅ ᴜsᴇʀ ɪᴅ</b>: "
-                f"<code>{message.reply_to_message.from_user.id}</code>\n"
-            )
-            file_info = get_id(message.reply_to_message)
-        else:
-            _id += "<b>ᴜsᴇʀ ɪᴅ</b>: " f"<code>{message.from_user.id}</code>\n"
-            file_info = get_id(message)
-        if file_info:
-            _id += (
-                f"<b>{file_info.message_type}</b>: "
-                f"<code>{file_info.file_id}</code>\n"
-            )
-        await message.reply_text(_id)
+@app.on_message(
+    filters.command(["id"])
+    & filters.group
+    & ~filters.edited
+)
+async ah madison(client: Client, message: Message):
+    usr = await client.get_users(message.from_user.id)
+    name = usr.first_name
+    async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
+                    await message.reply_photo(photo.file_id,       caption=f"""◂ اسمك ↫ {message.from_user.mention}\n\n◂ معرفك ↫ @{message.from_user.username}\n\n◂ ايديك ↫ {message.from_user.id}\n\n◂ ايدي الجروب ↫ {message.chat.id}""", 
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        name, url=f"https://t.me/{message.from_user.username}")
+                ],[
+                    InlineKeyboardButton(
+                        "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
+                ],
+            ]
+        ),
+    )
