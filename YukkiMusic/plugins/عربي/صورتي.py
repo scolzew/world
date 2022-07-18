@@ -1,11 +1,14 @@
 import asyncio
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from strings import get_command
+from strings.filters import command
+from YukkiMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 # الكود اهو يصحبي  . 
 
 @app.on_message(
-    command(["صورتي","صوري"])
+    command(["صورتي"])
     & filters.group
     & ~filters.edited
 )
