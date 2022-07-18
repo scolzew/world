@@ -9,10 +9,13 @@
 
 
 from typing import Union
-
+import asyncio
 from pyrogram import filters, types
-from pyrogram.types import InlineKeyboardMarkup, Message
+from pyrogram.types import (InlineKeyboardButton,
+                            InlineKeyboardMarkup, Message)
+                            from youtubesearchpython.__future__ import VideosSearch
 
+import config
 from config import BANNED_USERS
 from strings import get_command, get_string, helpers
 from YukkiMusic import app
