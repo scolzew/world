@@ -1,15 +1,34 @@
-from pyrogram import Client
+from pyrogram import Client, filters
 from pyrogram.types import Message
-from config import BOT_USERNAME
-from strings.get_file_id import get_file_id
 from strings import get_command
 from strings.filters import command
+from YukkiMusic import app
+
+def get_id(msg: Message):
+    if msg.media:
+        for message_type in (
+            "photo",
+            "animation",
+            "audio",
+            "document",
+            "video",
+            "video_note",
+            "voice",
+            # "contact",
+            # "dice",
+            # "poll",
+            # "location",
+            # "venue",
+            "sticker",
+        ):
+            obj = getattr(msg, message_type)
+            if obj:
+                setattr(obj, "message_type", message_type)
+                return obj
 
 
-@app.on_message(
-        command(["id"])
+@app.on_message(filters.command(["id", "stickerid", "stkid", "stckrid"]))
 async def showid(_, message: Message):
-    await message.delete()
     chat_type = message.chat.type
 
     if chat_type == "private":
@@ -24,10 +43,10 @@ async def showid(_, message: Message):
                 "<b>ʀᴇᴩʟɪᴇᴅ ᴜsᴇʀ ɪᴅ</b>: "
                 f"<code>{message.reply_to_message.from_user.id}</code>\n"
             )
-            file_info = get_file_id(message.reply_to_message)
+            file_info = get_id(message.reply_to_message)
         else:
             _id += "<b>ᴜsᴇʀ ɪᴅ</b>: " f"<code>{message.from_user.id}</code>\n"
-            file_info = get_file_id(message)
+            file_info = get_id(message)
         if file_info:
             _id += (
                 f"<b>{file_info.message_type}</b>: "
