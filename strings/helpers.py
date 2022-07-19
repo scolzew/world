@@ -38,26 +38,27 @@ HELP_1 = """✅**<u>اوامر المشرفين:</u>**
 /unauth معرف المستخدم • إزالة مستخدم من قائمة المطرودين للمجموعة.
 /authusers - تحقق من قائمة المصادقة للمجموعة.
 
-HELP_2 = """**<u>اوامر التشغيل:</u>**
+HELP_2 = """✅<u>**Play Commands:**</u>
 
 Available Commands = play , vplay , cplay
 
 ForcePlay Commands = playforce , vplayforce , cplayforce
 
-**c** اوامر التشغيل في القناه
-**v** لتشغيل الفيديو
+**c** stands for channel play.
+**v** stands for video play.
 **force** stands for force play.
 
-/play or /vplay or /cplay  • سيبدأ Bot في تشغيل استعلامك المحدد على الدردشة الصوتية أو بث الروابط المباشرة على الدردشات الصوتية.
+/play or /vplay or /cplay  - Bot will start playing your given query on voice chat or Stream live links on voice chats.
 
-/playforce or /vplayforce or /cplayforce •  يؤدي فرض التشغيل إلى إيقاف مسار التشغيل الحالي في الدردشة الصوتية وبدء تشغيل المسار الذي تم البحث عنه على الفور دون إزعاج/مسح قائمة الانتظار.
+/playforce or /vplayforce or /cplayforce -  **Force Play** stops the current playing track on voice chat and starts playing the searched track instantly without disturbing/clearing queue.
 
-/channelplay معرف القناه او ايدي القناه أو تعطيل - يمكنك ربط القناة بمجموعة وبث الموسيقى على الدردشة الصوتية للقناة من مجموعتك.
+/channelplay [Chat username or id] or [Disable] - Connect channel to a group and stream music on channel's voice chat from your group.
 
-✅**<u>Bot's قوائم التشغيل:</u>**
-/playlist • تحقق من قائمة التشغيل المحفوظة على الخوادم.
-/deleteplaylist • حذف أي موسيقى محفوظة في قائمة التشغيل
-/play • ابدء تشغيل قائمة التشغيل المحفوظة من الخوادم.
+
+✅**<u>Bot's Server Playlists:</u>**
+/playlist  - Check Your Saved Playlist On Servers.
+/deleteplaylist - Delete any saved music in your playlist
+/play  - Start playing Your Saved Playlist from Servers."""
 
 HELP_3 = """✅<u>**اوامر البوت:**</u>
 
