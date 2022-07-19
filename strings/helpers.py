@@ -38,7 +38,7 @@ HELP_1 = """✅**<u>اوامر المشرفين:</u>**
 /unauth معرف المستخدم • إزالة مستخدم من قائمة المطرودين للمجموعة.
 /authusers - تحقق من قائمة المصادقة للمجموعة.
 
-HELP_2 = """✅<u>**Play Commands:**</u>
+HELP_2 = """✅**<u>اوامر التشغيل:</u>**
 
 Available Commands = play , vplay , cplay
 
