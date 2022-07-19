@@ -27,13 +27,11 @@ async def khalid(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
     async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""ٲسـمـك💕 ⇐ {message.from_user.mention}""", 
+                    await message.reply_text( 
+                    f"""ٲسـمـك💕 ⇐ {message.from_user.mention}""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton(
-                        name, url=f"https://t.me/{message.from_user.username}")
-                ],[
                     InlineKeyboardButton(
                         "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
                 ],
@@ -152,6 +150,23 @@ def echo(client, msg):
     text = msg.text.split(None, 1)[1]
     msg.reply(text)
 
-@app.on_message(filters.command(["البايو"]))
-def forward(client, message):
-  message.reply(f"{message.from_user.about}")
+@app.on_message(
+    command(["معرفي"])
+    & filters.group
+    & ~filters.edited
+)
+async def khalid(client: Client, message: Message):
+    usr = await client.get_users(message.from_user.id)
+    name = usr.first_name
+    async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
+                    await message.reply_text( 
+                    f"""الـبـايـو💕 ⇐ @{message.from_user.about}""", 
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
+                ],
+            ]
+        ),
+    )
