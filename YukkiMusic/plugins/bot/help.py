@@ -100,9 +100,11 @@ async def helper_cb(client, CallbackQuery, _):
             )
         else:
             await CallbackQuery.edit_message_text(
-            await CallbackQuery.edit_message_photo(
                 helpers.HELP_5, reply_markup=keyboard
             )
+        else:
+            await CallbackQuery.edit_message_photo(
+                helpers.HELP_5, reply_markup=keyboard
             )
             return await CallbackQuery.answer()
     try:
