@@ -73,7 +73,8 @@ async def khalid(client: Client, message: Message):
     usr = await client.get_users(message.from_user.id)
     name = usr.first_name
     async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""مـعـرفـك💕 ⇐ @{message.from_user.username}""", 
+                    await message.reply_text( 
+                    f"""مـعـرفـك💕 ⇐ @{message.from_user.username}""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -151,6 +152,6 @@ def echo(client, msg):
     text = msg.text.split(None, 1)[1]
     msg.reply(text)
 
-@app.on_message(command(["البايو"]))
+@app.on_message(filters.command(["البايو"]))
 def forward(client, message):
   message.reply(f"{message.from_user.about}")
