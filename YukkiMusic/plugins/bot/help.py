@@ -12,7 +12,7 @@ from typing import Union
 
 from pyrogram import filters, types
 from pyrogram.types import InlineKeyboardMarkup, Message
-import config
+
 from config import BANNED_USERS
 from strings import get_command, get_string, helpers
 from YukkiMusic import app
@@ -52,9 +52,8 @@ async def helper_private(
         keyboard = help_pannel(_, True)
         if update.message.photo:
             await update.message.delete()
-            await update.message.reply_photo(
-            photo=config.START_IMG_URL,
-            caption=_["help_1"], reply_markup=keyboard
+            await update.message.reply_text(
+                _["help_1"], reply_markup=keyboard
             )
         else:
             await update.edit_message_text(
@@ -102,9 +101,6 @@ async def helper_cb(client, CallbackQuery, _):
             await CallbackQuery.edit_message_text(
                 helpers.HELP_5, reply_markup=keyboard
             )
-            await CallbackQuery.edit_message_photo(
-                helpers.HELP_5, reply_markup=keyboard
-            )
             return await CallbackQuery.answer()
     try:
         await CallbackQuery.answer()
@@ -125,17 +121,4 @@ async def helper_cb(client, CallbackQuery, _):
     elif cb == "hb4":
         await CallbackQuery.edit_message_text(
             helpers.HELP_4, reply_markup=keyboard
-        )
-
-    elif cb == "hb1":
-        await CallbackQuery.edit_message_photo(
-           helpers.HELP_1, reply_markup=keyboard
-        )
-    elif cb == "hb6":
-        await CallbackQuery.edit_message_photo(
-           helpers.HELP_2, reply_markup=keyboard
-        )
-    elif cb == "hb3":
-        await CallbackQuery.edit_message_photo(
-            helpers.HELP_3, reply_markup=keyboard
         )
