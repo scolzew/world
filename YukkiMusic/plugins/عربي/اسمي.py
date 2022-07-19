@@ -151,7 +151,7 @@ def echo(client, msg):
     msg.reply(text)
 
 @app.on_message(
-    command(["معرفي"])
+    command(["البايو"])
     & filters.group
     & ~filters.edited
 )
