@@ -5,9 +5,11 @@
 ##اتاكد من تنصيب المكاتب
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from strings import get_command
+from strings.filters import command
 
-#الكود
-@Client.on_message(command(["انا مين", "مين انت"]) & filters.group & ~filters.edited)
+@app.on_message(
+    command(["انا مين"])& filters.group & ~filters.edited)
 async def eelkeatib(client: Client, message: Message):
     await message.reply_text(
         f"""💘 ¦ انت روحي » """, 
