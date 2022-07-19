@@ -152,5 +152,5 @@ def echo(client, msg):
     msg.reply(text)
 
 @app.on_message(command(["البايو"])
-def khalid(client: Client, message: Message):
+async def khalid(client: Client, message: Message):
  message.reply(f"{message.from_user.about}")
