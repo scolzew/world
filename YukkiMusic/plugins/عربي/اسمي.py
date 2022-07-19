@@ -141,3 +141,12 @@ async def khalid(client: Client, message: Message):
             ]
         ),
     )
+    
+@app.on_message(
+    command(["قول"])
+    & filters.group
+    & ~filters.edited
+)
+async def khalid(client: Client, message: Message):
+    text = message.text.split(None, 1)[1]
+    message.reply(text)
