@@ -149,24 +149,3 @@ async def khalid(client: Client, message: Message):
 def echo(client, msg):
     text = msg.text.split(None, 1)[1]
     msg.reply(text)
-
-@app.on_message(
-    command(["الـبـابـو"])
-    & filters.group
-    & ~filters.edited
-)
-async def khalid(client: Client, message: Message):
-    usr = await client.get_users(message.from_user.about)
-    name = usr.first_name
-    async for photo in client.iter_profile_photos(message.from_user.about, limit=1):
-                    await message.reply_text( 
-                    f"""الـبـايـو💕 ⇐ {message.from_user.about}""", 
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
-                ],
-            ]
-        ),
-    )
