@@ -56,7 +56,7 @@ async def helper_private(
               _["help_1"], reply_markup=keyboard
             )
         else:
-             await message.reply_photo(
+             await update.message.reply_photo(
               photo=config.START_IMG_URL,
               caption=_["help_1"], reply_markup=keyboard
             )
