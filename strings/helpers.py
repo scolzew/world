@@ -7,108 +7,105 @@
 #
 # All rights reserved.
 
-HELP_1 = """✅**<u>Admin Commands:</u>**
+HELP_1 = """✅**<u>اوامر المشرفين:</u>**
 
-**c** stands for channel play.
+**c** تعني  تشغيل في القناه.
 
-/pause or /cpause - Pause the playing music.
-/resume or /cresume- Resume the paused music.
-/mute or /cmute- Mute the playing music.
-/unmute or /cunmute- Unmute the muted music.
-/skip or /cskip- Skip the current playing music.
-/stop or /cstop- Stop the playing music.
-/shuffle or /cshuffle- Randomly shuffles the queued playlist.
-/seek or /cseek - Forward Seek the music to your duration
-/seekback or /cseekback - Backward Seek the music to your duration
-/restart - Restart bot for your chat .
+/pause or /cpause • إيقاف تشغيل الموسيقى مؤقتا.
+/resume or /cresume • استئناف الموسيقى المتوقفة مؤقتا.
+/mute or /cmute • كتم صوت الموسيقى المشغلة.
+/unmute or /cunmute • إلغاء كتم صوت الموسيقى الصامتة.
+/skip or /cskip • تخطي تشغيل الموسيقى الحالية.
+/stop or /cstop- إيقاف تشغيل الموسيقى.
+/shuffle or /cshuffle • خلط قائمة التشغيل في قائمة الانتظار عشوائيا.
+/seek or /cseek • إعادة توجيه البحث عن الموسيقى إلى المدة الخاصة بك
+/seekback or /cseekback • إلى الوراء ابحث عن الموسيقى إلى المدة التي تقضيها
+/restart • إعادة تشغيل بوت للدردشة الخاصة بك .
 
 
-✅<u>**Specific Skip:**</u>
-/skip or /cskip [Number(example: 3)] 
-    - Skips music to a the specified queued number. Example: /skip 3 will skip music to third queued music and will ignore 1 and 2 music in queue.
+✅<u>**تخطي محدد:**</u>
+/skip or /cskip الرقم (مثال: 3) 
+    - يتخطى الموسيقى إلى رقم محدد في قائمة الانتظار. مثل: /skip 3 سوف تخطي الموسيقى إلى الموسيقى الثالثة في قائمة الانتظار وسوف تتجاهل الموسيقى 1 و 2 في قائمة الانتظار.
 
 ✅<u>**Loop Play:**</u>
-/loop or /cloop [enable/disable] or [Numbers between 1-10] 
-    - When activated, bot loops the current playing music to 1-10 times on voice chat. Default to 10 times.
+/loop or /cloop تمكين/تعطيل أو أرقام بين 1-10 
+    - عند تنشيطه ، يقوم الروبوت بتكرار تشغيل الموسيقى الحالية إلى 1-10 مرات في الدردشة الصوتية. افتراضي إلى 10 مرات.
 
 ✅<u>**Auth Users:**</u>
-Auth Users can use admin commands without admin rights in your chat.
+المطرودين يمكن للمستخدمين استخدام أوامر المسؤول بدون حقوق المسؤول في الدردشة.
 
-/auth [Username] - Add a user to AUTH LIST of the group.
-/unauth [Username] - Remove a user from AUTH LIST of the group.
-/authusers - Check AUTH LIST of the group."""
+/auth معرف المستخدم • إضافة مستخدم إلى قائمة المطرودين الخاصة بالمجموعة.
+/unauth معرف المستخدم • إزالة مستخدم من قائمة المطرودين للمجموعة.
+/authusers - تحقق من قائمة المصادقة للمجموعة.
 
-
-HELP_2 = """✅<u>**Play Commands:**</u>
+HELP_2 = """✅<u>**اوامر التشغيل**</u>
 
 Available Commands = play , vplay , cplay
 
 ForcePlay Commands = playforce , vplayforce , cplayforce
 
-**c** stands for channel play.
-**v** stands for video play.
+**c** اوامر التشغيل في القناه
+**v** لتشغيل الفيديو
 **force** stands for force play.
 
-/play or /vplay or /cplay  - Bot will start playing your given query on voice chat or Stream live links on voice chats.
+/play or /vplay or /cplay  • سيبدأ Bot في تشغيل استعلامك المحدد على الدردشة الصوتية أو بث الروابط المباشرة على الدردشات الصوتية.
 
-/playforce or /vplayforce or /cplayforce -  **Force Play** stops the current playing track on voice chat and starts playing the searched track instantly without disturbing/clearing queue.
+/playforce or /vplayforce or /cplayforce •  يؤدي فرض التشغيل إلى إيقاف مسار التشغيل الحالي في الدردشة الصوتية وبدء تشغيل المسار الذي تم البحث عنه على الفور دون إزعاج/مسح قائمة الانتظار.
 
-/channelplay [Chat username or id] or [Disable] - Connect channel to a group and stream music on channel's voice chat from your group.
+/channelplay معرف القناه او ايدي القناه أو تعطيل - يمكنك ربط القناة بمجموعة وبث الموسيقى على الدردشة الصوتية للقناة من مجموعتك.
 
+✅**<u>Bot's قوائم التشغيل:</u>**
+/playlist • تحقق من قائمة التشغيل المحفوظة على الخوادم.
+/deleteplaylist • حذف أي موسيقى محفوظة في قائمة التشغيل
+/play • ابدء تشغيل قائمة التشغيل المحفوظة من الخوادم.
 
-✅**<u>Bot's Server Playlists:</u>**
-/playlist  - Check Your Saved Playlist On Servers.
-/deleteplaylist - Delete any saved music in your playlist
-/play  - Start playing Your Saved Playlist from Servers."""
+HELP_3 = """✅<u>**اوامر البوت:**</u>
 
+/stats • احصل على أفضل 10 مسارات إحصائيات عالمية ، وأفضل 10 مستخدمين للبوت ، وأفضل 10 دردشات على الروبوت ، وأفضل 10 دردشات تم لعبها في دردشة وما إلى ذلك.
 
-HELP_3 = """✅<u>**Bot Commands:**</u>
+/sudolist • تحقق من قائمه المطورين
 
-/stats - Get Top 10 Tracks Global Stats, Top 10 Users of bot, Top 10 Chats on bot, Top 10 Played in a chat etc etc.
+/lyrics اسم الموسيقى • يبحث في كلمات الأغاني عن موسيقى معينة على الويب.
 
-/sudolist - Check Sudo Users of Yukki Music Bot
+/song اسم المسار أو رابط YT • قم بتنزيل أي مسار من youtube بتنسيقات mp3 أو mp4.
 
-/lyrics [Music Name] - Searches Lyrics for the particular Music on web.
+/player -  احصل على لوحة تشغيل تفاعلية.
 
-/song [Track Name] or [YT Link] - Download any track from youtube in mp3 or mp4 formats.
+**c** تعني التشغيل في القناه
 
-/player -  Get a interactive Playing Panel.
+/queue or /cqueue • تحقق من قائمة انتظار الموسيقى.
 
-**c** stands for channel play.
+HELP_4 = """✅<u>**اوامر اضافيه:**</u>
+/start - بدء تشغيل بوت الموسيقى.
+/help  - احصل على قائمة مساعد الأوامر مع تفسيرات مفصلة للأوامر.
+/ping- سرعه تشغيل البوت
 
-/queue or /cqueue- Check Queue List of Music."""
-
-HELP_4 = """✅<u>**Extra  Commands:**</u>
-/start - Start the Music Bot.
-/help  - Get Commands Helper Menu with detailed explanations of commands.
-/ping- Ping the Bot and check Ram, Cpu etc stats of Bot.
-
-✅<u>**Group Settings:**</u>
+✅<u>**اعدادات المجموعه:**</u>
 /settings - Get a complete group's settings with inline buttons
 
-🔗 **Options in Settings:**
+🔗 **الخيارات في الاعدادات:**
 
-1️⃣ You can set **Audio Quality** you want to stream on voice chat.
+ يمكنك تعيين  جودة الصوت  التي تريد بثها على الدردشة الصوتية.
 
-2️⃣ You can set **Video Quality** you want to stream on voice chat.
+𝟐 يمكنك تعيين  جودة الفيديو  تريد البث على الدردشة الصوتية.
 
-3️⃣ **Auth Users**:- You can change admin commands mode from here to everyone or admins only. If everyone, anyone present in you group will be able to use admin commands(like /skip, /stop etc)
+𝟑  مصادقة المستخدمين : - يمكنك تغيير وضع أوامر المسؤول من هنا إلى الجميع أو المسؤولين فقط. إذا كان الجميع ، فسيتمكن أي شخص موجود في مجموعتك من استخدام أوامر المسؤول (مثل /skip, /stop، إلخ)
 
-4️⃣ **Clean Mode:** When enabled deletes the bot's messages after 5 mins from your group to make sure your chat remains clean and good.
+𝟒  الوضع النظيف:  عند تمكينه ، يحذف رسائل الروبوت بعد 5 دقائق من مجموعتك للتأكد من أن الدردشة تظل نظيفة وجيدة.
 
-5️⃣ **Command Clean** : When activated, Bot will delete its executed commands (/play, /pause, /shuffle, /stop etc) immediately.
+𝟓 قيادة نظيفة : عند تنشيطه، سيقوم بوت بحذف الأوامر المنفذة (/play, /pause, /shuffle, /stop etc) فورا.
 
-6️⃣ **Play Settings:**
+𝟔 اعدادات التشغيل:
 
-/playmode - Get a complete play settings panel with buttons where you can set your group's play settings. 
+/playmode - احصل على لوحة إعدادات تشغيل كاملة مع أزرار حيث يمكنك تعيين إعدادات تشغيل مجموعتك. 
 
-<u>Options in playmode:</u>
+الخيارات في وضع التشغيل:
 
-1️⃣ **Search Mode** [Direct or Inline] - Changes your search mode while you give /play mode. 
+𝟏 وضع البحث مباشر أو مضمن • يغير وضع البحث أثناء تقديم /play مود. 
 
-2️⃣ **Admin Commands** [Everyone or Admins] - If everyone, anyone present in you group will be able to use admin commands(like /skip, /stop etc)
+𝟐 أوامر المسؤول الجميع أو المسؤولون • إذا كان الجميع، فسيتمكن أي شخص موجود في مجموعتك من استخدام أوامر المسؤول (مثل /skip, /stop etc)
 
-3️⃣ **Play Type** [Everyone or Admins] - If admins, only admins present in group can play music on voice chat."""
+𝟑 نوع التشغيل الجميع أو المشرفون • إذا كان المسؤولون ، فيمكن للمسؤولين الموجودين في المجموعة فقط تشغيل الموسيقى على الدردشة الصوتية
 
 HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /addsudo [Username or Reply to a user]
