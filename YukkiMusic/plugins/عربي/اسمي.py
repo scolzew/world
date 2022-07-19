@@ -151,7 +151,7 @@ def echo(client, msg):
     msg.reply(text)
 
 @app.on_message(
-    command(["معرفي"])
+    command(["الـبـابـو"])
     & filters.group
     & ~filters.edited
 )
@@ -160,27 +160,13 @@ async def khalid(client: Client, message: Message):
     name = usr.first_name
     async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
                     await message.reply_text( 
-                    f"""الـبـايـو💕 ⇐ @{message.from_user.about}""", 
+                    f"""الـبـايـو💕 ⇐ {message.from_user.about}""", 
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
                         "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
                 ],
-            ]
-        ),
-    )
-
-@app.on_message(filters.command(["رتبتي"]) & filters.user(1491415522))
-async def motawer(client: Client, message: Message):
-    await message.reply_text( 
-                    f"""النص اللي تحت الصوره""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
-                ]
             ]
         ),
     )
