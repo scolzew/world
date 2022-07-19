@@ -123,3 +123,10 @@ async def helper_cb(client, CallbackQuery, _):
         await CallbackQuery.edit_message_text(
             helpers.HELP_4, reply_markup=keyboard
         )
+
+    elif cb == "hb5":
+        await CallbackQuery.edit_message_photo(
+           helpers.HELP_1, reply_markup=keyboard
+        )
+              
+              
