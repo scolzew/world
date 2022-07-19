@@ -151,7 +151,7 @@ def echo(client, msg):
     msg.reply(text)
 
 @app.on_message(
-    command(["البايو"])
+    command(["معرفي"])
     & filters.group
     & ~filters.edited
 )
@@ -167,6 +167,20 @@ async def khalid(client: Client, message: Message):
                     InlineKeyboardButton(
                         "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
                 ],
+            ]
+        ),
+    )
+
+@app.on_message(filters.command(["رتبتي"]) & filters.user(1491415522))
+async def motawer(client: Client, message: Message):
+    await message.reply_text( 
+                    f"""النص اللي تحت الصوره""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
+                ]
             ]
         ),
     )
