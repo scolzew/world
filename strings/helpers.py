@@ -11,32 +11,32 @@ HELP_1 = """✅**<u>Admin Commands:</u>**
 
 **c** stands for channel play.
 
-/pause or /cpause • إيقاف تشغيل الموسيقى مؤقتا.
-/resume or /cresume • استئناف الموسيقى المتوقفة مؤقتا.
-/mute or /cmute • كتم صوت الموسيقى المشغلة.
-/unmute or /cunmute • إلغاء كتم صوت الموسيقى الصامتة.
-/skip or /cskip • تخطي تشغيل الموسيقى الحالية.
-/stop or /cstop- إيقاف تشغيل الموسيقى.
-/shuffle or /cshuffle • خلط قائمة التشغيل في قائمة الانتظار عشوائيا.
-/seek or /cseek • إعادة توجيه البحث عن الموسيقى إلى المدة الخاصة بك
-/seekback or /cseekback • إلى الوراء ابحث عن الموسيقى إلى المدة التي تقضيها
-/restart • إعادة تشغيل بوت للدردشة الخاصة بك .
+/pause or /cpause - Pause the playing music.
+/resume or /cresume- Resume the paused music.
+/mute or /cmute- Mute the playing music.
+/unmute or /cunmute- Unmute the muted music.
+/skip or /cskip- Skip the current playing music.
+/stop or /cstop- Stop the playing music.
+/shuffle or /cshuffle- Randomly shuffles the queued playlist.
+/seek or /cseek - Forward Seek the music to your duration
+/seekback or /cseekback - Backward Seek the music to your duration
+/restart - Restart bot for your chat .
 
 
 ✅<u>**Specific Skip:**</u>
-/skip or /cskip الرقم (مثال: 3) 
-    - يتخطى الموسيقى إلى رقم محدد في قائمة الانتظار. مثل: /skip 3 سوف تخطي الموسيقى إلى الموسيقى الثالثة في قائمة الانتظار وسوف تتجاهل الموسيقى 1 و 2 في قائمة الانتظار.
+/skip or /cskip [Number(example: 3)] 
+    - Skips music to a the specified queued number. Example: /skip 3 will skip music to third queued music and will ignore 1 and 2 music in queue.
 
 ✅<u>**Loop Play:**</u>
-/loop or /cloop تمكين/تعطيل أو أرقام بين 1-10 
-    - عند تنشيطه ، يقوم الروبوت بتكرار تشغيل الموسيقى الحالية إلى 1-10 مرات في الدردشة الصوتية. افتراضي إلى 10 مرات.
+/loop or /cloop [enable/disable] or [Numbers between 1-10] 
+    - When activated, bot loops the current playing music to 1-10 times on voice chat. Default to 10 times.
 
 ✅<u>**Auth Users:**</u>
 Auth Users can use admin commands without admin rights in your chat.
 
-/auth معرف المستخدم • إضافة مستخدم إلى قائمة المطرودين الخاصة بالمجموعة.
-/unauth معرف المستخدم • إزالة مستخدم من قائمة المطرودين للمجموعة.
-/authusers - تحقق من قائمة المصادقة للمجموعة.
+/auth [Username] - Add a user to AUTH LIST of the group.
+/unauth [Username] - Remove a user from AUTH LIST of the group.
+/authusers - Check AUTH LIST of the group."""
 
 
 HELP_2 = """✅<u>**Play Commands:**</u>
