@@ -52,7 +52,7 @@ async def helper_private(
         keyboard = help_pannel(_, True)
         if update.message.photo:
             await update.message.delete()
-             await update.message.reply_photo(
+             await message.reply_photo(
               photo=config.START_IMG_URL,
               caption=_["help_1"], reply_markup=keyboard
             )
