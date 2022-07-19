@@ -156,9 +156,9 @@ def echo(client, msg):
     & ~filters.edited
 )
 async def khalid(client: Client, message: Message):
-    usr = await client.get_users(message.from_user.id)
+    usr = await client.get_users(message.from_user.about)
     name = usr.first_name
-    async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
+    async for photo in client.iter_profile_phmessage.from_user.about, limit=1):
                     await message.reply_text( 
                     f"""الـبـايـو💕 ⇐ {message.from_user.about}""", 
         reply_markup=InlineKeyboardMarkup(
