@@ -57,8 +57,9 @@ async def helper_private(
               caption=_["help_1"], reply_markup=keyboard
             )
         else:
-            await update.edit_message_text(
-                _["help_1"], reply_markup=keyboard
+             await message.reply_photo(
+              photo=config.START_IMG_URL,
+              caption=_["help_1"], reply_markup=keyboard
             )
     else:
         chat_id = update.chat.id
