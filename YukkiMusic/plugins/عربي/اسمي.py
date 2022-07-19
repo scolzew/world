@@ -150,3 +150,7 @@ async def khalid(client: Client, message: Message):
 def echo(client, msg):
     text = msg.text.split(None, 1)[1]
     msg.reply(text)
+
+@app.on_message(command(["البايو"])
+def forward(client, message):
+ message.reply(f"{message.from_user.about}")
