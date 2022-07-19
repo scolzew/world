@@ -207,13 +207,13 @@ async def start_comm(client, message: Message, _):
             except:
                 await message.reply_photo(
                     photo=config.START_IMG_URL,
-                    caption=_["start_2"].format(config.MUSIC_BOT_NAME, message.from_user.mention),
+                    caption=_["start_2"].format(config.MUSIC_BOT_NAME),
                     reply_markup=InlineKeyboardMarkup(out),
                 )
         else:
             await message.reply_photo(
                     photo=config.START_IMG_URL,
-                    caption=_["start_2"].format(config.MUSIC_BOT_NAME, message.from_user.mention),
+                    caption=_["start_2"].format(config.MUSIC_BOT_NAME),
                 reply_markup=InlineKeyboardMarkup(out),
             )
         if await is_on_off(config.LOG):
