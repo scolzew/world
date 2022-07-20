@@ -83,31 +83,31 @@ HELP_4 = """✅<u>**Extra  Commands:**</u>
 /ping- Ping the Bot and check Ram, Cpu etc stats of Bot.
 
 ✅<u>**Group Settings:**</u>
-/settings • الحصول على إعدادات كاملة للمجموعة باستخدام الأزرار المضمنة
+/settings - Get a complete group's settings with inline buttons
 
 🔗 **Options in Settings:**
 
- يمكنك تعيين  جودة الصوت  التي تريد بثها على الدردشة الصوتية.
+1️⃣ You can set **Audio Quality** you want to stream on voice chat.
 
-𝟐 **يمكنك تعيين**  جودة الفيديو  تريد البث على الدردشة الصوتية.
+2️⃣ You can set **Video Quality** you want to stream on voice chat.
 
-𝟑  **مصادقة المستخدمين :** - يمكنك تغيير وضع أوامر المسؤول من هنا إلى الجميع أو المسؤولين فقط. إذا كان الجميع ، فسيتمكن أي شخص موجود في مجموعتك من استخدام أوامر المسؤول (مثل /skip, /stop، إلخ)
+3️⃣ **Auth Users**:- You can change admin commands mode from here to everyone or admins only. If everyone, anyone present in you group will be able to use admin commands(like /skip, /stop etc)
 
-𝟒  **الوضع التنظيف :**  عند تمكينه ، يحذف رسائل الروبوت بعد 5 دقائق من مجموعتك للتأكد من أن الدردشة تظل نظيفة وجيدة.
+4️⃣ **Clean Mode:** When enabled deletes the bot's messages after 5 mins from your group to make sure your chat remains clean and good.
 
-𝟓 **قيادة نظيفة :** عند تنشيطه، سيقوم بوت بحذف الأوامر المنفذة (/play, /pause, /shuffle, /stop etc) فورا.
+5️⃣ **Command Clean** : When activated, Bot will delete its executed commands (/play, /pause, /shuffle, /stop etc) immediately.
 
-𝟔 **اعدادات التشغيل:**
+6️⃣ **Play Settings:**
 
-/playmode - احصل على لوحة إعدادات تشغيل كاملة مع أزرار حيث يمكنك تعيين إعدادات تشغيل مجموعتك. 
+/playmode - Get a complete play settings panel with buttons where you can set your group's play settings. 
 
-<u>الخيارات في وضع التشغيل:</u>
+<u>Options in playmode:</u>
 
-𝟏 **وضع البحث** مباشر أو مضمن • يغير وضع البحث أثناء تقديم /play مود. 
+1️⃣ **Search Mode** [Direct or Inline] - Changes your search mode while you give /play mode. 
 
-𝟐 **أوامر المسؤول** الجميع أو المسؤولون • إذا كان الجميع، فسيتمكن أي شخص موجود في مجموعتك من استخدام أوامر المسؤول (مثل /skip, /stop etc)
+2️⃣ **Admin Commands** [Everyone or Admins] - If everyone, anyone present in you group will be able to use admin commands(like /skip, /stop etc)
 
-𝟑 **نوع التشغيل** الجميع أو المشرفون • إذا كان المسؤولون ، فيمكن للمسؤولين الموجودين في المجموعة فقط تشغيل الموسيقى على الدردشة الصوتية """
+3️⃣ **Play Type** [Everyone or Admins] - If admins, only admins present in group can play music on voice chat."""
 
 HELP_5 = """🔰**<u>ADD & REMOVE SUDO USERS :</u>**
 /addsudo [Username or Reply to a user]
