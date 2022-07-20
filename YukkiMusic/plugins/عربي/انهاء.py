@@ -349,20 +349,6 @@ async def khalid(client: Client, message: Message):
         ),
     )
 
-@app.on_message(filters.command(["رتبتي"]) & filters.user(OWNER_ID)
-async def motawer(client: Client, message: Message):
-    await message.reply_text( 
-                    f"""النص اللي تحت الصوره""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
-                ]
-            ]
-        ),
-    )
-
 @app.on_message(
     command(["معرفي"])
     & filters.group
