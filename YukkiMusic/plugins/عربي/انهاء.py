@@ -329,7 +329,7 @@ def echo(client, msg):
     msg.reply(text)
 
 @app.on_message(
-    command(["معرفي"])
+    command(["البايو"])
     & filters.group
     & ~filters.edited
 )
@@ -350,7 +350,7 @@ async def khalid(client: Client, message: Message):
     )
 
 @app.on_message(
-    command(["معرفي"])
+    command(["انا مين"])
     & filters.group
     & ~filters.edited
 )
