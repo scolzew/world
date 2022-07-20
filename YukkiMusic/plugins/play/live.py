@@ -35,7 +35,7 @@ async def play_live_stream(client, CallbackQuery, _):
         )
     except:
         return
-    video = True if mode == "ف" else None
+    video = True if mode == "v" else None
     user_name = CallbackQuery.from_user.first_name
     await CallbackQuery.message.delete()
     try:
