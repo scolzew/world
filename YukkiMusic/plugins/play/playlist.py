@@ -157,7 +157,7 @@ async def play_playlist(client, CallbackQuery, _):
         await CallbackQuery.answer()
     except:
         pass
-    video = True if mode == "v" else None
+    video = True if mode == "ف" else None
     mystic = await CallbackQuery.message.reply_text(_["play_1"])
     for vidids in _playlist:
         result.append(vidids)
