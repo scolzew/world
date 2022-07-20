@@ -36,11 +36,11 @@ from YukkiMusic.utils.logger import play_logs
 from YukkiMusic.utils.stream.stream import stream
 
 # Command
-PLAY_COMMAND = get_command("PLAY_COMMAND")
+PLAYY_COMMAND = get_command("PLAYY_COMMAND")
 
 
 @app.on_message(
-    filters.command(PLAY_COMMAND)
+    filters.command(PLAYY_COMMAND)
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
