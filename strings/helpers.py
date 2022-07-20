@@ -75,7 +75,7 @@ HELP_3 = """✅<u>**اوامر البوت:**</u>
 
 **c** تعني تشغيل في القناه
 
-/queue or /cqueue • تحقق من قائمة انتظار الموسيقى.""
+/queue or /cqueue • تحقق من قائمة انتظار الموسيقى."""
 
 HELP_4 = """✅<u>**Extra  Commands:**</u>
 /start - Start the Music Bot.
