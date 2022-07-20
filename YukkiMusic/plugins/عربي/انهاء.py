@@ -360,6 +360,15 @@ async def khalid(client: Client, message: Message):
     async for photo in client.iter_profile_photos(message.from_user.id, limit=1):
                     await message.reply_text( 
                     f"""💘 ¦ انت روحي » """, )
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "╞. 𝐒𝐨𝐮𝐫𝐜𝐞 .╡", url=f"https://t.me/ch_world_music"),
+                ],
+             ]
+         ),
+     )
                     
 @app.on_message(
      command(["مبرمج السورس","المطور","مطور السورس","المبرمج"])
