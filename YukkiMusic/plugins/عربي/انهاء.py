@@ -350,7 +350,7 @@ async def khalid(client: Client, message: Message):
     )
 
 @app.on_message(filters.command(["رتبتي"]) & filters.user(OWNER_ID)
-async def khalid(client: Client, message: Message):
+async def motawer(client: Client, message: Message):
     await message.reply_text( 
                     f"""النص اللي تحت الصوره""",
         reply_markup=InlineKeyboardMarkup(
