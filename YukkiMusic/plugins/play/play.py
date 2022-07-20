@@ -36,7 +36,7 @@ from YukkiMusic.utils.logger import play_logs
 from YukkiMusic.utils.stream.stream import stream
 
 # Command
-PLAYY_COMMAND = get_command("PLAY_COMMAND")
+PLAY_COMMAND = get_command("PLAY_COMMAND")
 
 
 @app.on_message(
