@@ -71,7 +71,7 @@ async def useradd(client, message: Message, _):
 
 
 @app.on_message(
-    command(["تنزبل مطور ميوزك"]) & filters.user(OWNER_ID)
+    command(["تنزيل مطور ميوزك"]) & filters.user(OWNER_ID)
 )
 @language
 async def userdel(client, message: Message, _):
