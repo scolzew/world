@@ -28,7 +28,7 @@ RESTART_COMMAND = get_command("RESTART_COMMAND")
 
 
 @app.on_message(
-    command(["تحديث"])
+    command(["تحديث الادمن"])
     & filters.group
     & ~filters.edited
     & ~BANNED_USERS
