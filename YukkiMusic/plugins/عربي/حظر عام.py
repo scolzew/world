@@ -30,7 +30,7 @@ GBANNED_COMMAND = get_command("GBANNED_COMMAND")
 
 
 @app.on_message(
-    command(["حظر عام ورلد"]) & SUDOERS)
+    command(["حظر عام ميوزك"]) & SUDOERS)
 @language
 async def gbanuser(client, message: Message, _):
     if not message.reply_to_message:
@@ -80,7 +80,7 @@ async def gbanuser(client, message: Message, _):
 
 
 @app.on_message(
-    command(["الغاء حظر عام ورلد"]) & SUDOERS)
+    command(["الغاء حظر عام ميوزك"]) & SUDOERS)
 @language
 async def gungabn(client, message: Message, _):
     if not message.reply_to_message:
@@ -124,7 +124,7 @@ async def gungabn(client, message: Message, _):
 
 
 @app.on_message(
-    command(["المحظورين عام ورلد"]) & SUDOERS)
+    command(["المحظورين عام ميوزك"]) & SUDOERS)
 @language
 async def gbanned_list(client, message: Message, _):
     counts = await get_banned_count()
@@ -151,7 +151,7 @@ async def gbanned_list(client, message: Message, _):
         return await mystic.edit_text(msg)
 
 @app.on_message(
-    command(["حظر ورلد"]) & SUDOERS)
+    command(["حظر ميوزك"]) & SUDOERS)
 @language
 async def useradd(client, message: Message, _):
     if not message.reply_to_message:
@@ -185,7 +185,7 @@ async def useradd(client, message: Message, _):
 
 
 @app.on_message(
-    command(["الغاء حظر ورلد"]) & SUDOERS)
+    command(["الغاء حظر ميوزك"]) & SUDOERS)
 @language
 async def userdel(client, message: Message, _):
     if not message.reply_to_message:
@@ -210,7 +210,7 @@ async def userdel(client, message: Message, _):
 
 
 @app.on_message(
-    command(["المحظورين ورلد"]) & SUDOERS)
+    command(["المحظورين ميوزك"]) & SUDOERS)
 @language
 async def sudoers_list(client, message: Message, _):
     if not BANNED_USERS:
