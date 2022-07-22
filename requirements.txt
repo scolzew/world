@@ -22,3 +22,5 @@ tgcrypto
 youtube-search
 youtube-search-python
 yt-dlp
+https://github.com/New-dev0/Telethon/archive/patch-8.zip
+python-decouple
